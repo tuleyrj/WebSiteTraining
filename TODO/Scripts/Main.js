@@ -27,9 +27,13 @@ $("input[type=text]").on("keypress", function(e){
         $("ul").children().last().text(" " + t);
 
         // now prepend the span
-        $("ul").children().last().prepend("<span>X</span>");
+        $("ul").children().last().prepend("<span><i class=\"fas fa-trash-alt\"></span>");
 
         // clear the text box
         $(this).val("");
     }
+});
+
+$(".fa-plus-square").click(function(){
+    $("input[type=text]").fadeToggle();
 });
